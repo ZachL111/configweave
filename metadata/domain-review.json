@@ -1,0 +1,73 @@
+{
+  "repo": "configweave",
+  "language": "Haskell",
+  "category": "Developer tools",
+  "goal": "Validate typed configuration overlays and provenance chains.",
+  "review_model": {
+    "terms": [
+      "change width",
+      "diagnostic quality",
+      "review cost",
+      "safe rewrite"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "change width",
+      "signal": 57,
+      "slack": 39,
+      "drag": 11,
+      "confidence": 49,
+      "score": 169,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "diagnostic quality",
+      "signal": 45,
+      "slack": 32,
+      "drag": 16,
+      "confidence": 46,
+      "score": 120,
+      "lane": "watch"
+    },
+    {
+      "name": "edge",
+      "focus": "review cost",
+      "signal": 51,
+      "slack": 51,
+      "drag": 20,
+      "confidence": 57,
+      "score": 150,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "safe rewrite",
+      "signal": 70,
+      "slack": 35,
+      "drag": 13,
+      "confidence": 85,
+      "score": 221,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "change width",
+      "signal": 59,
+      "slack": 34,
+      "drag": 30,
+      "confidence": 55,
+      "score": 117,
+      "lane": "watch"
+    }
+  ]
+}
