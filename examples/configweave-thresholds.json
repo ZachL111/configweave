@@ -1,0 +1,17 @@
+{
+  "repo": "configweave",
+  "thresholds": {
+    "signal": 3,
+    "slack": 2,
+    "confidence": 2,
+    "drag": 3,
+    "ship": 197,
+    "watch": 108
+  },
+  "terms": [
+    "change width",
+    "diagnostic quality",
+    "review cost",
+    "safe rewrite"
+  ]
+}
